@@ -24,6 +24,7 @@
   }
 
     </style>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </head>
 
   <body>
@@ -33,6 +34,10 @@
 
       <section class="jumbotron row">
         <div class="col-sm-6 pt-5 pl-5">
+          <!-- <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="saifullahkatpar" data-version="v1"> -->
+            <!-- <a class="badge-base__link LI-simple-link" href="https://pk.linkedin.com/in/saifullahkatpar?trk=profile-badge">Saifullah Katpar</a> -->
+          <!-- </div> -->
+              
           <h1 class="jumbotron-heading">Saifullah Katpar </h1>
           <br>
           <p class="lead"><img src="{% static 'ep.png' %}" height="15" width="30"> Manager BI & Analytics  </p>
@@ -41,14 +46,36 @@
             <a href="https://saifullahkatpar.com/" class="btn btn-primary my-2">Visit My Blog</a>
           </p>
         </div>
-         <div class="col-6">
+         <div class="col-2">
           <img src="{% static 'saif.png'%}" class="rounded" height=300></img>
+          <!-- <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green" ></img> -->
+         </div> 
+         <div class="col-2">
+          <!-- <img src="{% static 'saif.png'%}" class="rounded" height=300></img> -->
+          <!-- <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green" ></img> -->
+         </div> 
+         <div class="col-2">
+          <!-- <img src="{% static 'saif.png'%}" class="rounded" height=300></img> -->
+          
+          <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" ></img>
+          <img src="https://img.shields.io/badge/kubernetes-326ce5.svg?&style=for-the-badge&logo=kubernetes&logoColor=white" ></img>
+          <img src="https://img.shields.io/badge/PowerBI-F2C811?style=for-the-badge&logo=Power%20BI&logoColor=white" ></img>
+          <img src="https://img.shields.io/badge/Apache_Spark-FFFFFF?style=for-the-badge&logo=apachespark&logoColor=#E35A16" ></img>
+          <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white" ></img>
+          <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" ></img>
+          <img src="https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white" ></img>
+          <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green" ></img>
+          <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" ></img>
+
+
+                    
          </div> 
 
       </section>
 
       <div class="album py-5 bg-light">
         <div class="h1 text-center">Projects</div>
+        <br>
         <div class="container">
           <div class="row">
             {% for project in projects.all %}
@@ -56,7 +83,7 @@
             <div class="col-md-4">
               <a href="{% url 'detail' project.id %}">
               <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="{{ project.image.url}}">
+                <img class="card-img-top img-fluid img-thumbnail" src="{{ project.image.url}}" >
                 <div class="card-body">
                   <p class="card-text summary h6">{{project.title}}</p>
                 </div>
