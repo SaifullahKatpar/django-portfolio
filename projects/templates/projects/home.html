@@ -31,8 +31,8 @@
 
     <main role="main">
 
-      <section class="jumbotron text-center">
-        <div class="container">
+      <section class="jumbotron row">
+        <div class="col-sm-6 pt-5 pl-5">
           <h1 class="jumbotron-heading">Saifullah Katpar </h1>
           <br>
           <p class="lead"><img src="{% static 'ep.png' %}" height="15" width="30"> Manager BI & Analytics  </p>
@@ -40,8 +40,11 @@
           <p>
             <a href="https://saifullahkatpar.com/" class="btn btn-primary my-2">Visit My Blog</a>
           </p>
-          <img src="{% static 'saif.png'%}" class="rounded" height=300></img>
         </div>
+         <div class="col-6">
+          <img src="{% static 'saif.png'%}" class="rounded" height=300></img>
+         </div> 
+
       </section>
 
       <div class="album py-5 bg-light">
